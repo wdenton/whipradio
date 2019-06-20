@@ -2,13 +2,13 @@ Little shell script that streams internet radio stations I like.
 
 [[file:whipradio-screenshot.png]]
 
-# Requirements
+* Requirements
 
 + ~git~
 + ~mpv~
 + ~whiptail~
 
-# Installation
+* Installation
 
 This command will download all the files without requiring a GitHub account:
 
@@ -18,7 +18,8 @@ git clone https://github.com/wdenton/whipradio.git
 
 Then to run it, just run the script on its own:
 
-# Usage
+*  Usage
+
 #+begin_src shell
 cd whipradio
 ./whipradio
