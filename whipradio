@@ -7,7 +7,7 @@ STATIONS["BBC Radio Four"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4f
 STATIONS["BBC Radio Four Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
 STATIONS["BBC World Service"]="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk"
 STATIONS["Boom 97.3"]="https://newcap.leanstream.co/CHBMFM"
-STATIONS["CBC Radio One"]="http://cbc_r1_tor.akacast.akamaistream.net/7/632/451661/v1/rc.akacast.akamaistream.net/cbc_r1_tor"
+STATIONS["CBC Radio One (Toronto)"]="http://cbc_r1_tor.akacast.akamaistream.net/7/632/451661/v1/rc.akacast.akamaistream.net/cbc_r1_tor"
 STATIONS["Radio Aporee"]="http://radio.aporee.org:8000/aporee_high.m3u"
 STATIONS["Resonance FM"]="http://54.77.136.103:8000/resonance"
 STATIONS["Resonance Extra"]="http://54.77.136.103:8000/resonance-extra"
@@ -47,7 +47,7 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 25 40 15 \
 		    "BBC Radio Four Extra" "" \
 		    "BBC World Service" "" \
 		    "Boom 97.3" "" \
-		    "CBC Radio One" "" \
+		    "CBC Radio One (Toronto)" "" \
 		    "Radio Aporee" "" \
 		    "Resonance FM" "" \
 		    "Resonance Extra" "" \
