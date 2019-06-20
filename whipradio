@@ -1,0 +1,61 @@
+#!/bin/bash
+
+declare -A STATIONS
+
+STATIONS["BBC Radio Three"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
+STATIONS["BBC Radio Four"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
+STATIONS["BBC Radio Four Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
+STATIONS["CBC Radio One"]="http://cbc_r1_tor.akacast.akamaistream.net/7/632/451661/v1/rc.akacast.akamaistream.net/cbc_r1_tor"
+STATIONS["Radio Aporee"]="http://radio.aporee.org:8000/aporee_high.m3u"
+STATIONS["Resonance FM"]="http://54.77.136.103:8000/resonance"
+STATIONS["Resonance Extra"]="http://54.77.136.103:8000/resonance-extra"
+STATIONS["Soundart Radio"]="http://icecast.commedia.org.uk:8000/soundart.mp3"
+STATIONS["STAPLR"]="http://staplr.org:8000/staplr.ogg"
+STATIONS["TSF Jazz"]="https://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high.mp3"
+STATIONS["WFMU"]="http://wfmu.org/wfmu.pls"
+STATIONS["WWOZ"]="https://wwoz-sc.streamguys1.com/wwoz-hi.mp3"
+
+# echo ${STATIONS["BBC Radio Three"]}
+
+# echo "Keys"
+# echo "${!STATIONS[@]}"
+
+# echo "--"
+# for K in "${!STATIONS[@]}"; do echo -n "$K" ' '; done
+# echo "--"
+
+# LIST=""
+# for K in "${!STATIONS[@]}"; do
+#     LIST+="$K . "
+# done
+# echo $LIST
+
+# echo "Loop"
+# for K in "${!STATIONS[@]}"; do echo $K; done
+
+# echo "Loop both"
+# for K in "${!STATIONS[@]}"; do echo $K --- ${STATIONS[$K]}; done
+
+# whiptail --title "Restore Files" --menu "Please " 14 40 6 "Test One" "Test" `for K in "${!STATIONS[@]}"; do echo -n "$K" "${STATIONS[$K]}"; done`
+# whiptail --title "Restore Files" --menu "Please " 25 40 15 $LIST
+
+SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 25 40 15 \
+		    "BBC Radio Three" "" \
+		    "BBC Radio Four" "" \
+		    "BBC Radio Four Extra" "" \
+		    "CBC Radio One" "" \
+		    "Radio Aporee" "" \
+		    "Resonance FM" "" \
+		    "Resonance Extra" "" \
+		    "Soundart Radio" "" \
+		    "STAPLR" "" \
+		    "TSF Jazz" "" \
+		    "WFMU" "" \
+		    "WWOZ" "" \
+		    2>&1 >/dev/tty
+	 )
+
+clear
+echo "Playing $SELECTED ..."
+
+mpv ${STATIONS[$SELECTED]}
