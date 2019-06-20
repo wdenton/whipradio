@@ -1,1 +1,25 @@
 Little shell script that streams internet radio stations I like.
+
+[[file:whipradio-screenshot.png]]
+
+# Requirements
+
++ ~git~
++ ~mpv~
++ ~whiptail~
+
+# Installation
+
+This command will download all the files without requiring a GitHub account:
+
+#+begin_src shell
+git clone https://github.com/wdenton/whipradio.git
+#+end_src
+
+Then to run it, just run the script on its own:
+
+# Usage
+#+begin_src shell
+cd whipradio
+./whipradio
+#+end_src
