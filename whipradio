@@ -18,6 +18,7 @@ STATIONS["WFMU"]="http://wfmu.org/wfmu.pls"
 STATIONS["WQXR"]="https://stream.wqxr.org/wqxr-web"
 STATIONS["WQXR New Sounds"]="https://q2stream.wqxr.org/q2-web"
 STATIONS["WWOZ"]="https://wwoz-sc.streamguys1.com/wwoz-hi.mp3"
+STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
 
 # echo ${STATIONS["BBC Radio Three"]}
 
@@ -43,7 +44,7 @@ STATIONS["WWOZ"]="https://wwoz-sc.streamguys1.com/wwoz-hi.mp3"
 # whiptail --title "Restore Files" --menu "Please " 14 40 6 "Test One" "Test" `for K in "${!STATIONS[@]}"; do echo -n "$K" "${STATIONS[$K]}"; done`
 # whiptail --title "Restore Files" --menu "Please " 25 40 15 $LIST
 
-SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 25 40 15 \
+SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 50 12 \
 		    "BBC Radio Three" "" \
 		    "BBC Radio Four" "" \
 		    "BBC Radio Four Extra" "" \
@@ -60,6 +61,7 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 25 40 15 \
 		    "WQXR" "" \
 		    "WQXR New Sounds" "" \
 		    "WWOZ" "" \
+		    "Zoomer" "" \
 		    2>&1 >/dev/tty
 	)
 
