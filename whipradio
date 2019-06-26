@@ -20,6 +20,8 @@ STATIONS["WQXR New Sounds"]="https://q2stream.wqxr.org/q2-web"
 STATIONS["WWOZ"]="https://wwoz-sc.streamguys1.com/wwoz-hi.mp3"
 STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
 
+PLAYER="mpv --no-ytdl" # mpv without the YouTube hook script
+
 # echo ${STATIONS["BBC Radio Three"]}
 
 # echo "Keys"
@@ -68,4 +70,4 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 50 12 \
 clear
 echo "Playing $SELECTED ..."
 
-mpv ${STATIONS[$SELECTED]}
+$PLAYER ${STATIONS[$SELECTED]}
