@@ -22,6 +22,41 @@ STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
 
 PLAYER="mpv --no-ytdl" # mpv without the YouTube hook script
 
+SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 50 12 \
+		    "BBC Radio Three" "" \
+		    "BBC Radio Four" "" \
+		    "BBC Radio Four Extra" "" \
+		    "BBC World Service" "" \
+		    "Boom 97.3" "" \
+		    "CBC Radio One (Toronto)" "" \
+		    "Radio Aporee" "" \
+		    "Resonance FM" "" \
+		    "Resonance Extra" "" \
+		    "Soundart Radio" "" \
+		    "STAPLR" "" \
+		    "TSF Jazz" "" \
+		    "WFMU" "" \
+		    "WQXR" "" \
+		    "WQXR New Sounds" "" \
+		    "WWOZ" "" \
+		    "Zoomer" "" \
+		    2>&1 >/dev/tty
+	)
+
+clear
+
+if [ -z "$SELECTED" ]
+then
+    # Use Cancel to quit permanently
+    echo "Quitting"
+else
+    echo "Playing '$SELECTED' ..."
+    $PLAYER ${STATIONS[$SELECTED]}
+    # After quitting a station, rerun the script to choose another
+    $0
+fi
+
+
 # echo ${STATIONS["BBC Radio Three"]}
 
 # echo "Keys"
@@ -45,29 +80,3 @@ PLAYER="mpv --no-ytdl" # mpv without the YouTube hook script
 
 # whiptail --title "Restore Files" --menu "Please " 14 40 6 "Test One" "Test" `for K in "${!STATIONS[@]}"; do echo -n "$K" "${STATIONS[$K]}"; done`
 # whiptail --title "Restore Files" --menu "Please " 25 40 15 $LIST
-
-SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 50 12 \
-		    "BBC Radio Three" "" \
-		    "BBC Radio Four" "" \
-		    "BBC Radio Four Extra" "" \
-		    "BBC World Service" "" \
-		    "Boom 97.3" "" \
-		    "CBC Radio One (Toronto)" "" \
-		    "Radio Aporee" "" \
-		    "Resonance FM" "" \
-		    "Resonance Extra" "" \
-		    "Soundart Radio" "" \
-		    "STAPLR" "" \
-		    "TSF Jazz" "" \
-		    "WFMU" "" \
-		    "WQXR" "" \
-		    "WQXR New Sounds" "" \
-		    "WWOZ" "" \
-		    "Zoomer" "" \
-		    2>&1 >/dev/tty
-	)
-
-clear
-echo "Playing $SELECTED ..."
-
-$PLAYER ${STATIONS[$SELECTED]}
