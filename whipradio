@@ -20,7 +20,7 @@ STATIONS["WQXR New Sounds"]="https://q2stream.wqxr.org/q2-web"
 STATIONS["WWOZ"]="https://wwoz-sc.streamguys1.com/wwoz-hi.mp3"
 STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
 
-PLAYER="mpv --no-ytdl" # mpv without the YouTube hook script
+PLAYER="mpv --no-ytdl --quiet" # mpv without the YouTube hook script
 
 SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 50 12 \
 		    "BBC Radio Three" "" \
@@ -50,7 +50,8 @@ then
     # Use Cancel to quit permanently
     echo "Quitting"
 else
-    echo "Playing '$SELECTED' ..."
+    echo -e "\033[1m ... $SELECTED ... \033[m"
+    echo
     $PLAYER ${STATIONS[$SELECTED]}
     # After quitting a station, rerun the script to choose another
     $0
