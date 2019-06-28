@@ -2,6 +2,7 @@
 
 declare -A STATIONS
 
+STATIONS["bauhaus.fm"]="http://bauhaus.fm:8000/_a.m3u"
 STATIONS["BBC Radio Three"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
 STATIONS["BBC Radio Four"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
 STATIONS["BBC Radio Four Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
@@ -22,10 +23,11 @@ STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
 
 PLAYER="mpv --no-ytdl --quiet" # mpv without the YouTube hook script
 
-SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 50 12 \
-		    "BBC Radio Three" "" \
-		    "BBC Radio Four" "" \
-		    "BBC Radio Four Extra" "" \
+SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 60 12 \
+		    "bauhaus.fm" "" \
+		    "BBC Radio 3" "" \
+		    "BBC Radio 4" "" \
+		    "BBC Radio 4 Extra" "" \
 		    "BBC World Service" "" \
 		    "Boom 97.3" "" \
 		    "CBC Radio One (Toronto)" "" \
