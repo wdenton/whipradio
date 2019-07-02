@@ -6,6 +6,7 @@ Little shell script that streams internet radio stations I like.
 
 This requires a Unix-like system.
 
++ ~bash~ (version 4)
 + ~git~ (to get the code)
 + ~mpv~ (to play the stream)
 + ~whiptail~ (to do the dialog box)
