@@ -4,9 +4,23 @@ Little shell script that streams internet radio stations I like.
 
 * Requirements
 
+This requires a Unix-like system.
+
 + ~git~ (to get the code)
 + ~mpv~ (to play the stream)
 + ~whiptail~ (to do the dialog box)
+
+On Ubuntu, this will install what you need (~whiptail~ is built in):
+
+#+begin_src shell
+sudo apt install git mpv
+#+end_src
+
+On Mac OS X, run this to get ~whiptail~:
+
+#+begin_src shell
+brew install newt
+#+end_src
 
 * Installation
 
