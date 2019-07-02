@@ -23,6 +23,12 @@ On Mac OS X, run this to get ~whiptail~:
 brew install newt
 #+end_src
 
+It will even work on Android, with [[https://termux.com/][Termux]].  Open a shell, then run:
+
+#+begin_src shell
+pkg install git dialog mpv
+#+end_src
+
 * Installation
 
 This command will download all the files without requiring a GitHub account:
