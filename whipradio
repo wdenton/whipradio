@@ -3,9 +3,9 @@
 declare -A STATIONS
 
 STATIONS["bauhaus.fm"]="http://bauhaus.fm:8000/_a.m3u"
-STATIONS["BBC Radio Three"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
-STATIONS["BBC Radio Four"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
-STATIONS["BBC Radio Four Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
+STATIONS["BBC Radio 3"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
+STATIONS["BBC Radio 4"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
+STATIONS["BBC Radio 4 Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
 STATIONS["BBC World Service"]="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk"
 STATIONS["Boom 97.3"]="https://newcap.leanstream.co/CHBMFM"
 STATIONS["CBC Radio One (Toronto)"]="http://cbc_r1_tor.akacast.akamaistream.net/7/632/451661/v1/rc.akacast.akamaistream.net/cbc_r1_tor"
@@ -54,7 +54,7 @@ then
 else
     echo -e "\033[1m ... $SELECTED ... \033[m"
     echo
-    $PLAYER ${STATIONS[$SELECTED]}
+    $PLAYER "${STATIONS[$SELECTED]}"
     # After quitting a station, rerun the script to choose another
     $0
 fi
