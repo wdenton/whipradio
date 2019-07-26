@@ -46,6 +46,11 @@ cd whipradio
 ./whipradio
 #+end_src
 
+* Station information
+
++ [[http://www.radio-browser.info/gui/#!/][Community Radio Station Board]] (listings for thousands of online stations)
++ [[http://radia.fm/][Radia]] (small international network of experimental art radio stations)
+
 * Bugs
 
 Not a bug, but a needed code improvement.  The script defines an associative array in a Bash script, where the keys are the station names and the values are the stream URLs.  I can't figure out how to pass the station names to ~whiptail~ to make them appear in the menu list, so I have to hard-code them.  This means duplication, which I'd like to get rid of.  Suggestions welcome.
