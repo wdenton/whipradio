@@ -24,6 +24,15 @@ STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
 
 PLAYER="mpv --no-ytdl --quiet" # mpv without the YouTube hook script
 
+# If a station is specified as an argument, play it, then exit.
+if [ -n "$1" ]
+then
+    $PLAYER "${STATIONS[$1]}"
+    exit
+fi
+
+# Otherwise, present a menu.
+
 SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 60 12 \
 		    "bauhaus.fm" "" \
 		    "BBC Radio 3" "" \
