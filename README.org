@@ -17,7 +17,7 @@ On Ubuntu, this will install what you need (~whiptail~ is built in):
 sudo apt install git mpv
 #+end_src
 
-On Mac OS X, run this to get ~whiptail~:
+On Mac OS X, run this to get ~whiptail~ (requires the [[https://brew.sh/][Homebrew]] package manager):
 
 #+begin_src shell
 brew install newt
