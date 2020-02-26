@@ -2,6 +2,7 @@
 
 declare -A STATIONS
 
+STATIONS["9128"]="https://streams.radio.co/s0aa1e6f4a/listen"
 STATIONS["bauhaus.fm"]="http://bauhaus.fm:8000/_a.m3u"
 STATIONS["BBC Radio 3"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
 STATIONS["BBC Radio 4"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
@@ -35,6 +36,7 @@ fi
 # Otherwise, present a menu.
 
 SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 60 12 \
+		    "9128" "" \
 		    "bauhaus.fm" "" \
 		    "BBC Radio 3" "" \
 		    "BBC Radio 4" "" \
