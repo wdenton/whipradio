@@ -56,7 +56,6 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 60 12 \
 		    "WQXR" "" \
 		    "WQXR New Sounds" "" \
 		    "WWOZ" "" \
-		    "Zoomer" "" \
 		    2>&1 >/dev/tty
 	)
 
