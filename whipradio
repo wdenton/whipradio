@@ -18,6 +18,7 @@ STATIONS["New Morning Radio"]="https://www.radioking.com/play/new-morning-radio"
 STATIONS["Radio Aporee"]="http://radio.aporee.org:8000/aporee_high.m3u"
 STATIONS["Resonance FM"]="http://stream.resonance.fm:8000/resonance.m3u"
 STATIONS["Resonance Extra"]="http://stream.resonance.fm:8000/resonance-extra.m3u"
+STATIONS["RTÉ Radio 1"]="https://av.rasset.ie/av/live/radio/radio1.m3u"
 STATIONS["Soundart Radio"]="http://icecast.commedia.org.uk:8000/soundart.mp3"
 STATIONS["STAPLR"]="http://staplr.org:8000/staplr.ogg"
 STATIONS["TSF Jazz"]="https://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high.mp3"
@@ -55,6 +56,7 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 60 12 \
 		    "Radio Aporee" "" \
 		    "Resonance FM" "" \
 		    "Resonance Extra" "" \
+		    "RTÉ Radio 1" "" \
 		    "Soundart Radio" "" \
 		    "STAPLR" "" \
 		    "TSF Jazz" "" \
