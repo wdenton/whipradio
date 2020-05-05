@@ -9,6 +9,7 @@ STATIONS["BBC Radio 4"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_m
 STATIONS["BBC Radio 4 Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
 STATIONS["BBC World Service"]="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk"
 STATIONS["Boom 97.3"]="https://newcap.leanstream.co/CHBMFM"
+STATIONS["CAMP"]="http://listen.camp:8000/320"
 STATIONS["CBC Radio One (Toronto)"]="https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8"
 STATIONS["FIP"]="http://icecast.radiofrance.fr/fip-hifi.aac"
 STATIONS["FIP Jazz"]="http://icecast.radiofrance.fr/fipjazz-hifi.aac"
@@ -39,31 +40,32 @@ fi
 
 # Otherwise, present a menu.
 
-SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 60 12 \
-		    "9128" "" \
-		    "bauhaus.fm" "" \
-		    "BBC Radio 3" "" \
-		    "BBC Radio 4" "" \
-		    "BBC Radio 4 Extra" "" \
-		    "BBC World Service" "" \
-		    "Boom 97.3" "" \
-		    "CBC Radio One (Toronto)" "" \
-		    "FIP" "" \
-		    "FIP Jazz" "" \
-		    "Jazzcast" "" \
-		    "KFJC" "" \
-		    "New Morning Radio" "" \
-		    "Radio Aporee" "" \
-		    "Resonance FM" "" \
-		    "Resonance Extra" "" \
-		    "RTÉ Radio 1" "" \
-		    "Soundart Radio" "" \
-		    "STAPLR" "" \
-		    "TSF Jazz" "" \
-		    "WFMU" "" \
-		    "WQXR" "" \
-		    "WQXR New Sounds" "" \
-		    "WWOZ" "" \
+SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 80 12 \
+		    "9128" "Ambient and electronic music" \
+		    "bauhaus.fm" "Experimental (Weimar)" \
+		    "BBC Radio 3" "Classical, jazz, drama (UK)" \
+		    "BBC Radio 4" "News, information, drama (UK)" \
+		    "BBC Radio 4 Extra" "Comedy, drama, documentary (UK)" \
+		    "BBC World Service" "News and information (UK)" \
+		    "Boom 97.3" "Classic hits (Toronto)" \
+		    "CAMP" "Residential arts school (France)" \
+		    "CBC Radio One" "News and information (Toronto)" \
+		    "FIP" "Music (Paris)" \
+		    "FIP Jazz" "Jazz (Paris)" \
+		    "Jazzcast" "Jazz (Toronto)" \
+		    "KFJC" "College radio (California)" \
+		    "New Morning Radio" "Jazz (France)" \
+		    "Radio Aporee" "Field recordings" \
+		    "Resonance FM" "Arts and community (London)" \
+		    "Resonance Extra" "Music, sound art (London)" \
+		    "RTÉ Radio 1" "News and information (Dublin)" \
+		    "Soundart Radio" "Radio art (Darlington, UK)" \
+		    "STAPLR" "Library sonification (Toronto)" \
+		    "TSF Jazz" "Jazz (Paris)" \
+		    "WFMU" "Freeform (New Jersey)" \
+		    "WQXR" "Classical (New Jersey)" \
+		    "WQXR New Sounds" "New music (New Jersey)" \
+		    "WWOZ" "Jazz, blues, R&B (New Orleans)" \
 		    2>&1 >/dev/tty
 	)
 
