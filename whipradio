@@ -16,6 +16,8 @@ STATIONS["FIP Jazz"]="http://icecast.radiofrance.fr/fipjazz-hifi.aac"
 STATIONS["Jazzcast"]="https://ice23.securenetsystems.net/JAZZ"
 STATIONS["KFJC"]="http://netcast.kfjc.org/kfjc-192k-aac"
 STATIONS["New Morning Radio"]="https://www.radioking.com/play/new-morning-radio"
+STATIONS["NTS 1"]="http://stream-relay-geo.ntslive.net/stream"
+STATIONS["NTS 2"]="http://stream-relay-geo.ntslive.net/stream2"
 STATIONS["Radio Aporee"]="http://radio.aporee.org:8000/aporee_high.m3u"
 STATIONS["Resonance FM"]="http://stream.resonance.fm:8000/resonance.m3u"
 STATIONS["Resonance Extra"]="http://stream.resonance.fm:8000/resonance-extra.m3u"
@@ -23,6 +25,7 @@ STATIONS["RTÉ Radio 1"]="https://av.rasset.ie/av/live/radio/radio1.m3u"
 STATIONS["Soundart Radio"]="http://icecast.commedia.org.uk:8000/soundart.mp3"
 STATIONS["STAPLR"]="http://staplr.org:8000/staplr.ogg"
 STATIONS["TSF Jazz"]="https://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high.mp3"
+STATIONS["WDCB"]="http://wdcb-ice.streamguys.org/mobile-aac"
 STATIONS["WFMU"]="http://wfmu.org/wfmu.pls"
 STATIONS["WQXR"]="https://stream.wqxr.org/wqxr-web"
 STATIONS["WQXR New Sounds"]="https://q2stream.wqxr.org/q2-web"
@@ -55,6 +58,8 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 80 12 \
 		    "Jazzcast" "Jazz (Toronto)" \
 		    "KFJC" "College radio (California)" \
 		    "New Morning Radio" "Jazz (France)" \
+		    "NTS 1" "Freeform (London)" \
+		    "NTS 2" "Freeform (London)" \
 		    "Radio Aporee" "Field recordings" \
 		    "Resonance FM" "Arts and community (London)" \
 		    "Resonance Extra" "Music, sound art (London)" \
@@ -62,6 +67,7 @@ SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 80 12 \
 		    "Soundart Radio" "Radio art (Darlington, UK)" \
 		    "STAPLR" "Library sonification (Toronto)" \
 		    "TSF Jazz" "Jazz (Paris)" \
+		    "WDCB" "Jazz (Chicago)" \
 		    "WFMU" "Freeform (New Jersey)" \
 		    "WQXR" "Classical (New Jersey)" \
 		    "WQXR New Sounds" "New music (New Jersey)" \
