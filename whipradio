@@ -1,11 +1,14 @@
 #!/bin/bash
 
-# See stations.txt for the data
+# This file has the station names, URLs and descriptions.
+DATA_FILE="stations.txt"
 
-# Associative array for playing the chosen station
+# Associative array for playing the chosen station:
+# key will be station name, value the URL.
 declare -A STATIONS
 
 # Array to feed to whiptail to present the station listings
+# It will be station names and descriptions all in one long array.
 DESCRIPTIONS=()
 
 # What will play the music
@@ -17,15 +20,15 @@ PLAYER="mpv --no-ytdl --quiet" # mpv without the YouTube hook script
 
 while IFS="|" read -r name url description
 do
-    DESCRIPTIONS+=("$name" "$description")  # Note the double-quotes around the variable references
+    DESCRIPTIONS+=("$name" "$description")  # Note the double quotes around the variable references
     STATIONS[${name}]="$url"
-done < stations.txt
+done < $DATA_FILE
 
 # Generate the menu
 SELECTED=$(whiptail --title "Whip Radio" --menu "" 30 80 22 \
 		    "${DESCRIPTIONS[@]}" \
 		    2>&1 >/dev/tty
-	   	)
+	)
 
 if [ -z "$SELECTED" ]
 then
