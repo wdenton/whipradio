@@ -1,81 +1,31 @@
 #!/bin/bash
 
+# See stations.txt for the data
+
+# Associative array for playing the chosen station
 declare -A STATIONS
 
-STATIONS["9128"]="https://streams.radio.co/s0aa1e6f4a/listen"
-STATIONS["bauhaus.fm"]="http://bauhaus.fm:8000/_a.m3u"
-STATIONS["BBC Radio 3"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
-STATIONS["BBC Radio 4"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
-STATIONS["BBC Radio 4 Extra"]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
-STATIONS["BBC World Service"]="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk"
-STATIONS["Boom 97.3"]="https://newcap.leanstream.co/CHBMFM"
-STATIONS["CAMP"]="http://listen.camp:8000/320"
-STATIONS["CBC Radio One"]="https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8"
-STATIONS["FIP"]="http://icecast.radiofrance.fr/fip-hifi.aac"
-STATIONS["FIP Jazz"]="http://icecast.radiofrance.fr/fipjazz-hifi.aac"
-STATIONS["Jazzcast"]="https://ice23.securenetsystems.net/JAZZ"
-STATIONS["KFJC"]="http://netcast.kfjc.org/kfjc-192k-aac"
-STATIONS["New Morning Radio"]="https://www.radioking.com/play/new-morning-radio"
-STATIONS["NTS 1"]="http://stream-relay-geo.ntslive.net/stream"
-STATIONS["NTS 2"]="http://stream-relay-geo.ntslive.net/stream2"
-STATIONS["Radio Aporee"]="http://radio.aporee.org:8000/aporee_high.m3u"
-STATIONS["Resonance FM"]="http://stream.resonance.fm:8000/resonance.m3u"
-STATIONS["Resonance Extra"]="http://stream.resonance.fm:8000/resonance-extra.m3u"
-STATIONS["RTÉ Radio 1"]="https://av.rasset.ie/av/live/radio/radio1.m3u"
-STATIONS["Soundart Radio"]="http://icecast.commedia.org.uk:8000/soundart.mp3"
-STATIONS["STAPLR"]="http://staplr.org:8000/staplr.ogg"
-STATIONS["TSF Jazz"]="https://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high.mp3"
-STATIONS["WDCB"]="http://wdcb-ice.streamguys.org/mobile-aac"
-STATIONS["WFMU"]="http://wfmu.org/wfmu.pls"
-STATIONS["WQXR"]="https://stream.wqxr.org/wqxr-web"
-STATIONS["WQXR New Sounds"]="https://q2stream.wqxr.org/q2-web"
-STATIONS["WWOZ"]="https://wwoz-sc.streamguys1.com/wwoz-hi.mp3"
-# STATIONS["Zoomer"]="http://65.19.131.139/mzmedia-cfzmamaac1-ibc2"
+# Array to feed to whiptail to present the station listings
+DESCRIPTIONS=()
 
+# What will play the music
 PLAYER="mpv --no-ytdl --quiet" # mpv without the YouTube hook script
 
-# If a station is specified as an argument, play it, then exit.
-if [ -n "$1" ]
-then
-    $PLAYER "${STATIONS[$1]}"
-    exit
-fi
+# Bash quoting had me confused for a long time until I saw this
+# answer on (you knew it) Stack Overflow.  Thank you!
+# https://stackoverflow.com/a/16902151/854346
 
-# Otherwise, present a menu.
+while IFS="|" read -r name url description
+do
+    DESCRIPTIONS+=("$name" "$description")  # Note the double-quotes around the variable references
+    STATIONS[${name}]="$url"
+done < stations.txt
 
-SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 20 80 12 \
-		    "9128" "Ambient and electronic music" \
-		    "bauhaus.fm" "Experimental (Weimar)" \
-		    "BBC Radio 3" "Classical, jazz, drama (UK)" \
-		    "BBC Radio 4" "News, information, drama (UK)" \
-		    "BBC Radio 4 Extra" "Comedy, drama, documentary (UK)" \
-		    "BBC World Service" "News and information (UK)" \
-		    "Boom 97.3" "Classic hits (Toronto)" \
-		    "CAMP" "Residential arts school (France)" \
-		    "CBC Radio One" "News and information (Toronto)" \
-		    "FIP" "Music (Paris)" \
-		    "FIP Jazz" "Jazz (Paris)" \
-		    "Jazzcast" "Jazz (Toronto)" \
-		    "KFJC" "College radio (California)" \
-		    "New Morning Radio" "Jazz (France)" \
-		    "NTS 1" "Freeform (London)" \
-		    "NTS 2" "Freeform (London)" \
-		    "Radio Aporee" "Field recordings" \
-		    "Resonance FM" "Arts and community (London)" \
-		    "Resonance Extra" "Music, sound art (London)" \
-		    "RTÉ Radio 1" "News and information (Dublin)" \
-		    "Soundart Radio" "Radio art (Darlington, UK)" \
-		    "STAPLR" "Library sonification (Toronto)" \
-		    "TSF Jazz" "Jazz (Paris)" \
-		    "WDCB" "Jazz (Chicago)" \
-		    "WFMU" "Freeform (New Jersey)" \
-		    "WQXR" "Classical (New Jersey)" \
-		    "WQXR New Sounds" "New music (New Jersey)" \
-		    "WWOZ" "Jazz, blues, R&B (New Orleans)" \
+# Generate the menu
+SELECTED=$(whiptail --title "Whip Radio" --menu "Choose a station" 30 80 22 \
+		    "${DESCRIPTIONS[@]}" \
 		    2>&1 >/dev/tty
 	)
-
-clear
 
 if [ -z "$SELECTED" ]
 then
@@ -88,28 +38,3 @@ else
     # After quitting a station, rerun the script to choose another
     $0
 fi
-
-
-# echo ${STATIONS["BBC Radio Three"]}
-
-# echo "Keys"
-# echo "${!STATIONS[@]}"
-
-# echo "--"
-# for K in "${!STATIONS[@]}"; do echo -n "$K" ' '; done
-# echo "--"
-
-# LIST=""
-# for K in "${!STATIONS[@]}"; do
-#     LIST+="$K . "
-# done
-# echo $LIST
-
-# echo "Loop"
-# for K in "${!STATIONS[@]}"; do echo $K; done
-
-# echo "Loop both"
-# for K in "${!STATIONS[@]}"; do echo $K --- ${STATIONS[$K]}; done
-
-# whiptail --title "Restore Files" --menu "Please " 14 40 6 "Test One" "Test" `for K in "${!STATIONS[@]}"; do echo -n "$K" "${STATIONS[$K]}"; done`
-# whiptail --title "Restore Files" --menu "Please " 25 40 15 $LIST
