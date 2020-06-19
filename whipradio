@@ -25,7 +25,7 @@ done < stations.txt
 SELECTED=$(whiptail --title "Whip Radio" --menu "" 30 80 22 \
 		    "${DESCRIPTIONS[@]}" \
 		    2>&1 >/dev/tty
-	   l	)
+	   	)
 
 if [ -z "$SELECTED" ]
 then
