@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Directory where script lives, so we can read int
+# the stations.txt file no matter where the script is
+# called.
+WHIPDIR=$(dirname "$0")
+
 # This file has the station names, URLs and descriptions.
 DATA_FILE="stations.txt"
+DATA_FILE="${WHIPDIR}/${DATA_FILE}"
 
 # Associative array for playing the chosen station:
 # key will be station name, value the URL.
@@ -22,7 +28,7 @@ while IFS="|" read -r name url description
 do
     DESCRIPTIONS+=("$name" "$description")  # Note the double quotes around the variable references
     STATIONS[${name}]="$url"
-done < $DATA_FILE
+done < "$DATA_FILE"
 
 # Generate the menu
 SELECTED=$(whiptail --title "Whip Radio" --menu "" 30 80 22 \
