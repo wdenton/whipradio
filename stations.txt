@@ -19,6 +19,7 @@ New Morning Radio|https://www.radioking.com/play/new-morning-radio|Jazz (France)
 Noods Radio|https://noodsradio.out.airtime.pro/noodsradio_a|Independent (Bristol, UK)
 NTS 1|http://stream-relay-geo.ntslive.net/stream|Freeform (London)
 NTS 2|http://stream-relay-geo.ntslive.net/stream2|Freeform (London)
+NTS Expansions|https://stream-mixtape-geo.ntslive.net/mixtape3|Jazz (London)
 Radio Aporee|http://radio.aporee.org:8000/aporee_high.m3u|Field recordings
 Resonance FM|http://stream.resonance.fm/resonance.m3u|Arts and community (London)
 Resonance Extra|http://stream.resonance.fm:8000/resonance-extra.m3u|Music, sound art (London)
