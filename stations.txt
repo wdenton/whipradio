@@ -1,9 +1,9 @@
 9128|https://streams.radio.co/s0aa1e6f4a/listen|Ambient and electronic music
 bauhaus.fm|http://bauhaus.fm:8000/_a.m3u|Experimental (Weimar)
-BBC Radio 3|http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p|Classical, jazz, drama (UK)
-BBC Radio 4|http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p|News, information, drama (UK)
-BBC Radio 4 Extra|http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p|Comedy, drama, documentary (UK)
-BBC World Service|http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk|News and information (UK)
+BBC Radio 3|http://stream.live.vc.bbcmedia.co.uk/bbc_radio_three|Classical, jazz, drama (UK)
+BBC Radio 4|http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourfm|News, information, drama (UK)
+BBC Radio 4 Extra|http://stream.live.vc.bbcmedia.co.uk/bbc_radio_four_extra|Comedy, drama, documentary (UK)
+BBC World Service|http://stream.live.vc.bbcmedia.co.uk/bbc_world_service|News and information (UK)
 Boom 97.3|https://newcap.leanstream.co/CHBMFM|Classic hits (Toronto)
 CAMP|http://listen.camp:8000/320|Residential arts school (France)
 CBC Radio One|https://cbcliveradio-lh.akamaihd.net/i/CBCR1_TOR@118420/master.m3u8|News and information (Toronto)
