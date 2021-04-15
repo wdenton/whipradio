@@ -52,7 +52,13 @@ Edit ~stations.txt~ and add a line with three parts separated by pipes:
 
 ~name|url|description~
 
-* Station information
+* Related
+
+Sources of radio stream information:
 
 + [[http://www.radio-browser.info/][Community Radio Station Board]] (listings for thousands of online stations)
 + [[http://radia.fm/][Radia]] (small international network of experimental art radio stations)
+
+Similar projects:
+
++ [[https://gitlab.gnome.org/World/Shortwave][Shortwave]] (GNOME internet radio player)
