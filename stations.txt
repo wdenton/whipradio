@@ -22,6 +22,7 @@ NTS 2|http://stream-relay-geo.ntslive.net/stream2|Freeform (London)
 NTS Expansions|https://stream-mixtape-geo.ntslive.net/mixtape3|Jazz (London)
 Radio Aporee|http://radio.aporee.org:8000/aporee_high.m3u|Field recordings
 Radio On Berlin|http://radioon.out.airtime.pro:8000/radioon_a|Freeform (Berlin)
+radio.earth|https://aporee.org:8443/aporee|Anthropocene (Berlin)
 Resonance FM|http://stream.resonance.fm/resonance.m3u|Arts and community (London)
 Resonance Extra|http://stream.resonance.fm:8000/resonance-extra.m3u|Music, sound art (London)
 RTÉ Radio 1|https://av.rasset.ie/av/live/radio/radio1.m3u|News and information (Dublin)
