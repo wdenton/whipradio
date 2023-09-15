@@ -39,11 +39,11 @@ git clone https://github.com/wdenton/whipradio.git
 
 * Usage
 
-Run the script on its own:
+Run the script on its own, for example:
 
 #+begin_src shell
-cd whipradio
-./whipradio
+./whipradio # If you are in the directory
+~/whipradio/whipradio # Or a full path can be specified
 #+end_src
 
 * Adding a station
