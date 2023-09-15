@@ -13,8 +13,8 @@ FIP|http://icecast.radiofrance.fr/fip-hifi.aac|Music (Paris)
 FIP Jazz|http://icecast.radiofrance.fr/fipjazz-hifi.aac|Jazz (Paris)
 Jet FM|http://80.82.229.202/jetfm.mp3|Freeform (France)
 KFJC|http://netcast.kfjc.org/kfjc-192k-aac|College radio (California)
-LS: Kolkata, Chittaranjan Colony|http://locus.creacast.com:9001/kolkata_chittaranjan_colony.mp3|Locus Sonus live audio
-LS: Pacific Forest, Costa Rica|http://209.133.216.3:7118/stream|Locus Sonus live audio
+LS: Amsterdam, Hydrophile 1|https://locus.creacast.com:9443/amsterdam_hydrophile_1.mp3|Locus Sonus live audio
+LS: Kolkata, Survey Park|https://locus.creacast.com:9443/kolkata_survey_park.mp3|Locus Sonus live audio
 New Morning Radio|https://www.radioking.com/play/new-morning-radio|Jazz (France)
 Noods Radio|https://noodsradio.out.airtime.pro/noodsradio_a|Independent (Bristol, UK)
 NTS 1|http://stream-relay-geo.ntslive.net/stream|Freeform (London)
