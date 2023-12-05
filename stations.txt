@@ -1,5 +1,6 @@
 9128|https://streams.radio.co/s0aa1e6f4a/listen|Ambient and electronic music
 bauhaus.fm|http://bauhaus.fm:8000/_a.m3u|Experimental (Weimar)
+BBC Radio 1 Dance|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_one_dance/bbc_radio_one_dance.isml/bbc_radio_one_dance-audio=320000.m3u8|Dance (UK)
 BBC Radio 3|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio=320000.m3u8|Classical, jazz, drama (UK)
 BBC Radio 4|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio=320000.m3u8|News, information, drama (UK)
 BBC Radio 4 Extra|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio=320000.m3u8|Comedy, drama, documentary (UK)
