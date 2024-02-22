@@ -1,4 +1,7 @@
-Little shell script that streams internet radio stations I like.
+#+title:Whip Radio
+#+author: William Denton
+
+Whip Radio is a little shell script that streams internet radio stations I like.
 
 [[file:whipradio-screenshot.png]]
 
@@ -45,6 +48,10 @@ Run the script on its own, for example:
 ./whipradio # If you are in the directory
 ~/whipradio/whipradio # Or a full path can be specified
 #+end_src
+
+Use the arrow keys to go up or down to the station you want to hear, then hit Enter.
+
+To quit, hit Tab to move to ~OK~, then Tab (or right-arrow) to ~Cancel~, then hit Enter.
 
 * Adding a station
 
