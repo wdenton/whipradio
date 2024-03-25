@@ -37,6 +37,7 @@ Wave Farm Pond Station|https://audio.wavefarm.org/pondstation.mp3.m3u|Sound of a
 WDCB|http://wdcb-ice.streamguys.org/wdcb128|Jazz (Chicago)
 Weather for the Blind|https://listen.mixlr.com/3b501b0eb047cfcf8410016195f3b57d|Weather-controlled synth (New Orleans)
 WFMU|http://wfmu.org/wfmu.pls|Freeform (New Jersey)
+WPRB|https://wprb.streamguys1.com/live|Freeform (New Jersey)
 WQXR|https://stream.wqxr.org/wqxr-web|Classical (New Jersey)
 WQXR New Sounds|https://q2stream.wqxr.org/q2-web|New music (New Jersey)
 WWOZ|https://wwoz-sc.streamguys1.com/wwoz-hi.mp3|Jazz, blues, R&B (New Orleans)
