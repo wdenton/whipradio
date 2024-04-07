@@ -15,6 +15,7 @@ dublab|https://dublab.out.airtime.pro/dublab_a|Freeform (Los Angeles)
 Dublin Digital Radio|https://dublindigitalradio.out.airtime.pro/dublindigitalradio_a|Arts and community (Dublin)
 FIP|http://icecast.radiofrance.fr/fip-hifi.aac|Music (Paris)
 FIP Jazz|http://icecast.radiofrance.fr/fipjazz-hifi.aac|Jazz (Paris)
+Frozen Section Radio|https://fsrlive.out.airtime.pro/fsrlive_a|Freeform
 Jet FM|http://80.82.229.202/jetfm.mp3|Freeform (France)
 KFJC|http://netcast.kfjc.org/kfjc-192k-aac|College radio (California)
 LS: Amsterdam, Hydrophile 1|https://locus.creacast.com:9443/amsterdam_hydrophile_1.mp3|Locus Sonus live audio
