@@ -29,7 +29,7 @@ brew install newt
 It will even work on Android, with [[https://termux.com/][Termux]].  Open a shell, then run:
 
 #+begin_src shell
-pkg install git dialog mpv
+pkg install git whiptail mpv
 #+end_src
 
 * Installation
