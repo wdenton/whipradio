@@ -6,7 +6,7 @@ BBC Radio 4|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_fourf
 BBC Radio 4 Extra|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio=320000.m3u8|Comedy, drama, documentary (UK)
 BBC Radio 6 Music|http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio=320000.m3u8|Music (UK)
 BBC World Service|http://stream.live.vc.bbcmedia.co.uk/bbc_world_service|News and information (UK)
-Birdsong.fm|https://streaming.radio.co/s5c5da6a36/listen|Birds
+Birdsong.fm|https://a1.radio.co/s5c5da6a36/listen|Birds
 Boom 97.3|https://newcap.leanstream.co/CHBMFM|Classic hits (Toronto)
 CAMP|http://listen.camp:8000/320|Residential arts school (France)
 CBC Radio One|https://cbcradiolive.akamaized.net/hls/live/2041036/ES_R1ETR/adaptive_192/chunklist_ao.m3u8|News and information (Toronto)
@@ -21,6 +21,7 @@ KFJC|http://netcast.kfjc.org/kfjc-192k-aac|College radio (California)
 LS: Amsterdam, Hydrophile 1|https://locus.creacast.com:9443/amsterdam_hydrophile_1.mp3|Locus Sonus live audio
 LS: Kolkata, Survey Park|https://locus.creacast.com:9443/kolkata_survey_park.mp3|Locus Sonus live audio
 New Morning Radio|https://www.radioking.com/play/new-morning-radio|Jazz (France)
+Noise Radio|https://a5.asurahosting.com:7640/radio.mp3|Sound art (Netherlands)
 Noods Radio|https://noodsradio.out.airtime.pro/noodsradio_a|Independent (Bristol, UK)
 NTS 1|http://stream-relay-geo.ntslive.net/stream|Freeform (London)
 NTS 2|http://stream-relay-geo.ntslive.net/stream2|Freeform (London)
